@@ -1,15 +1,14 @@
-#ifndef FWOOSH_HPP
-#define FWOOSH_HPP
+#ifndef POLYMORPH_HPP
+#define POLYMORPH_HPP
 #include "Aspell.hpp"
-#include <memory>
 
-class Fwoosh : public Aspell
+class Polymorph : public Aspell
 {
 private:
 public:
-    Fwoosh();
+    Polymorph();
     virtual const Aspell* CloneAspell() override;
     virtual const std::unique_ptr<Aspell> CloneAspell2() override;
 };
 
-#endif // Fwoosh_HPP
+#endif // Fireball_HPP

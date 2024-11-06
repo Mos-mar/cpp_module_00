@@ -3,14 +3,15 @@ using namespace std;
 Warlock::Warlock(std::string name, std::string title) : name(name), title(title)
 {
     cout << getName() << " : This looks like another boring day." << endl;
+    mySpellBook = new Spellbook();
 }
 
-const std::string &Warlock::getName() const
+const std::string& Warlock::getName() const
 {
     return this->name;
 }
 
-const std::string &Warlock::getTitle() const
+const std::string& Warlock::getTitle() const
 {
     return this->title;
 }
@@ -27,24 +28,39 @@ void Warlock::introduce() const
 
 void Warlock::learnSpell(Aspell *learnThisSpell)
 {
-    knownSpells.push_back(learnThisSpell);
+    if (mySpellBook && learnThisSpell)
+    {
+        mySpellBook->learnSpell(learnThisSpell);
+    }
 }
 
 void Warlock::forgetSpell(std::string spellToForget)
 {
-    knownSpells.erase(
-        std::remove_if(knownSpells.begin(), knownSpells.end(),
-                       [spellToForget](Aspell *spell){ return spell->getSpellName() == spellToForget; }), // lambda
-        knownSpells.end());
+    if(mySpellBook)
+    {
+       mySpellBook->forgetSpell(spellToForget);
+    }
 }
 
 void Warlock::launchSpell(std::string spellName, ATarget &currTarget)
 {
-    for (const auto &i : knownSpells)
-        currTarget.getHitBySpell(*i);
+ 
+     if (mySpellBook)
+    {
+        Aspell* spell = mySpellBook->createSpell(spellName);
+        //std::cout << spell->getSpellName();
+        if (spell)
+        {
+            //std::cout << "my spell exists !!" << std::endl;
+            spell->launch(currTarget);
+        }
+    }
+    //for(const auto &i : knownSpells)
+        //currTarget.getHitBySpell(*i);
 }
 
 Warlock::~Warlock()
 {
     cout << getName() << " : My job here is done!" << endl;
+    delete mySpellBook;
 }

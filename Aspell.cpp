@@ -16,5 +16,6 @@ const std::string Aspell::getEffect() const
 
 const void Aspell::launch(const ATarget &target)
 {
+    //std::cout << "const void Aspell::launch : spell name : " << this->getSpellName() << std::endl;
     target.getHitBySpell(*this);
 }

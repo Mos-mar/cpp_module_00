@@ -4,7 +4,7 @@ Dummy::Dummy() : ATarget("Target Practice Dummy")
 {
 }
 
-const ATarget *Dummy::CloneATarget()
+const ATarget* Dummy::CloneATarget()
 {
     return new Dummy();
 }

@@ -8,6 +8,11 @@
 #include "ATarget.hpp"
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
+#include "Polymoph.hpp"
+#include "Fireball.hpp"
+#include "TargetGenerator.hpp"
+#include "Brickwall.hpp"
+#include "Spellbook.hpp"
 
 class Warlock{
 
@@ -15,10 +20,13 @@ class Warlock{
     std::string name;
     std::string title; 
     std::vector<Aspell*> knownSpells; //TODO : fais une map string,Aspell
+    Spellbook* mySpellBook;
     
     public:
     Warlock(std::string name,std::string title);
     Warlock(Warlock&) = delete;
+    Warlock& operator=(const Warlock&) = delete;
+
     const std::string& getName() const;
     const std::string& getTitle() const;
     void setTitle(const std::string& EnterName);

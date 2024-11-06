@@ -15,9 +15,9 @@ private:
 
 public:
     ATarget(std::string type);
-    const std::string &getTargetName() const;
-    const std::string &getTargetType() const;
-    virtual const ATarget *CloneATarget() = 0;
+    const std::string& getTargetName() const;
+    const std::string& getTargetType() const;
+    virtual const ATarget* CloneATarget() = 0;
     virtual const std::unique_ptr<ATarget> CloneATarget2() = 0;
     const void getHitBySpell(const Aspell &spell) const;
 };
