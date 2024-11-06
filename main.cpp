@@ -3,7 +3,7 @@
 int main()
 {
 
-    /*SUB0.txt
+    /*SUB0.txt (obsolete)
     Warlock const richard("Richard", "Master of Magma!");
     richard.introduce();
     std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
@@ -16,7 +16,7 @@ int main()
     delete jack;
     */
 
-    /*SUB1.txt
+    /*SUB1.txt (obsolete)
      Warlock richard("Richard", "the Titled!");
 
      Dummy bob;
@@ -31,6 +31,7 @@ int main()
      richard.launchSpell("Fwoosh", bob);
      */
 
+    /*SUB2.txt*/
     Warlock richard("Richard", "foo");
     richard.setTitle("Hello, I'm Richard the Warlock!");
     Brickwall model1;
