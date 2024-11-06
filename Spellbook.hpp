@@ -7,7 +7,7 @@
 #include <algorithm>
 class Spellbook {
     private:
-    std::vector<Aspell*> bookOfSpells; //TODO: fais une map , vector pu la merde pour ca.
+    std::vector<Aspell*> bookOfSpells; //TODO: fais une map, c'est mieux.
     public:
     Spellbook();
     Spellbook(Spellbook&) = delete;
