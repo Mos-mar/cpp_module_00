@@ -7,7 +7,7 @@ class Fireball : public Aspell
 private:
 public:
     Fireball();
-    virtual const Aspell* CloneAspell() override;
+    virtual const Aspell *CloneAspell() override;
     virtual const std::unique_ptr<Aspell> CloneAspell2() override;
 };
 

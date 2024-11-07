@@ -6,20 +6,19 @@
 #include <vector>
 #include <algorithm>
 
-class TargetGenerator 
+class TargetGenerator
 {
-    private:
-    std::vector<ATarget*> knownTargets; //ou un set pour avoir des uniques
+private:
+    std::vector<ATarget *> knownTargets; // ou un set pour avoir des uniques
 
-    public:
+public:
     TargetGenerator();
-    TargetGenerator(TargetGenerator&) = delete;
-    TargetGenerator& operator=(const TargetGenerator&) = delete;
+    TargetGenerator(TargetGenerator &) = delete;
+    TargetGenerator &operator=(const TargetGenerator &) = delete;
 
-    void learnTargetType(ATarget* learnTar);
-    void forgetTargetType(std::string const & forgetTar);
-    ATarget* createTarget(std::string const & createTar);
-
+    void learnTargetType(ATarget *learnTar);
+    void forgetTargetType(std::string const &forgetTar);
+    ATarget *createTarget(std::string const &createTar);
 };
 
 #endif // TargetGenerator_HPP

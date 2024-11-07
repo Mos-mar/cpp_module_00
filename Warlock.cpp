@@ -6,12 +6,12 @@ Warlock::Warlock(std::string name, std::string title) : name(name), title(title)
     mySpellBook = new Spellbook();
 }
 
-const std::string& Warlock::getName() const
+const std::string &Warlock::getName() const
 {
     return this->name;
 }
 
-const std::string& Warlock::getTitle() const
+const std::string &Warlock::getTitle() const
 {
     return this->title;
 }
@@ -36,31 +36,30 @@ void Warlock::learnSpell(Aspell *learnThisSpell)
 
 void Warlock::forgetSpell(std::string spellToForget)
 {
-    if(mySpellBook)
+    if (mySpellBook)
     {
-       mySpellBook->forgetSpell(spellToForget);
+        mySpellBook->forgetSpell(spellToForget);
     }
 }
 
 void Warlock::launchSpell(std::string spellName, ATarget &currTarget)
 {
- 
-     if (mySpellBook)
+
+    if (mySpellBook)
     {
-        Aspell* spell = mySpellBook->createSpell(spellName);
-        //std::cout << spell->getSpellName();
+        Aspell *spell = mySpellBook->createSpell(spellName);
+        // std::cout << spell->getSpellName();
         if (spell)
         {
-            //std::cout << "my spell exists !!" << std::endl;
+            // std::cout << "Warlock::launchSpell == my spell exists !! : "  << spell->getEffect() << std::endl;
             spell->launch(currTarget);
+            delete spell;
         }
     }
-    //for(const auto &i : knownSpells)
-        //currTarget.getHitBySpell(*i);
 }
 
 Warlock::~Warlock()
 {
-    cout << getName() << " : My job here is done!" << endl;
+    std::cout << getName() << " : My job here is done!" << std::endl;
     delete mySpellBook;
 }

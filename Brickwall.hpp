@@ -9,7 +9,7 @@ class Brickwall : public ATarget
 private:
 public:
     Brickwall();
-    virtual const ATarget* CloneATarget() override;
+    virtual const ATarget *CloneATarget() override;
     virtual const std::unique_ptr<ATarget> CloneATarget2() override;
 };
 

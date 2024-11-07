@@ -4,7 +4,7 @@ Fireball::Fireball() : Aspell("Fireball", "burnt to a crisp")
 {
 }
 
-const Aspell* Fireball::CloneAspell()
+const Aspell *Fireball::CloneAspell()
 {
     return new Fireball();
 }

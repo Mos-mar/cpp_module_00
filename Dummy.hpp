@@ -9,7 +9,7 @@ class Dummy : public ATarget
 private:
 public:
     Dummy();
-    virtual const ATarget* CloneATarget() override;
+    virtual const ATarget *CloneATarget() override;
     virtual const std::unique_ptr<ATarget> CloneATarget2() override;
 };
 

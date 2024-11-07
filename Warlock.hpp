@@ -14,28 +14,27 @@
 #include "Brickwall.hpp"
 #include "Spellbook.hpp"
 
-class Warlock{
+class Warlock
+{
 
-    private:
+private:
     std::string name;
-    std::string title; 
-    std::vector<Aspell*> knownSpells; //TODO : fais une map string,Aspell
-    Spellbook* mySpellBook;
-    
-    public:
-    Warlock(std::string name,std::string title);
-    Warlock(Warlock&) = delete;
-    Warlock& operator=(const Warlock&) = delete;
+    std::string title;
+    Spellbook *mySpellBook;
 
-    const std::string& getName() const;
-    const std::string& getTitle() const;
-    void setTitle(const std::string& EnterName);
+public:
+    Warlock(std::string name, std::string title);
+    Warlock(Warlock &) = delete;
+    Warlock &operator=(const Warlock &) = delete;
+
+    const std::string &getName() const;
+    const std::string &getTitle() const;
+    void setTitle(const std::string &EnterName);
     void introduce() const;
-    void learnSpell(Aspell* learnThisSpell);
+    void learnSpell(Aspell *learnThisSpell);
     void forgetSpell(std::string spellToForget);
-    void launchSpell(std::string spellName,ATarget& currTarget);
+    void launchSpell(std::string spellName, ATarget &currTarget);
     ~Warlock();
-
 };
 
 #endif

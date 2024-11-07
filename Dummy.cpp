@@ -4,12 +4,12 @@ Dummy::Dummy() : ATarget("Target Practice Dummy")
 {
 }
 
-const ATarget* Dummy::CloneATarget()
+const ATarget *Dummy::CloneATarget()
 {
     return new Dummy();
 }
 
 const std::unique_ptr<ATarget> Dummy::CloneATarget2()
 {
-    return  std::make_unique<Dummy>();
+    return std::make_unique<Dummy>();
 }

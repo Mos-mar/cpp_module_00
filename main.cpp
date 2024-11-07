@@ -1,36 +1,34 @@
 #include "Warlock.hpp"
 
+/*SUB0.txt (obsolete)
+Warlock const richard("Richard", "Master of Magma!");
+richard.introduce();
+std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
+
+Warlock *jack = new Warlock("Jack", "the Long!");
+jack->introduce();
+jack->setTitle("the Mighty!");
+jack->introduce();
+
+delete jack;
+*/
+
+/*SUB1.txt (obsolete)
+ Warlock richard("Richard", "the Titled!");
+
+ Dummy bob;
+ Fwoosh *fwoosh = new Fwoosh();
+
+ richard.learnSpell(fwoosh);
+
+ richard.introduce();
+ richard.launchSpell("Fwoosh", bob);
+
+ richard.forgetSpell("Fwoosh");
+ richard.launchSpell("Fwoosh", bob);
+ */
 int main()
 {
-
-    /*SUB0.txt (obsolete)
-    Warlock const richard("Richard", "Master of Magma!");
-    richard.introduce();
-    std::cout << richard.getName() << " - " << richard.getTitle() << std::endl;
-
-    Warlock *jack = new Warlock("Jack", "the Long!");
-    jack->introduce();
-    jack->setTitle("the Mighty!");
-    jack->introduce();
-
-    delete jack;
-    */
-
-    /*SUB1.txt (obsolete)
-     Warlock richard("Richard", "the Titled!");
-
-     Dummy bob;
-     Fwoosh *fwoosh = new Fwoosh();
-
-     richard.learnSpell(fwoosh);
-
-     richard.introduce();
-     richard.launchSpell("Fwoosh", bob);
-
-     richard.forgetSpell("Fwoosh");
-     richard.launchSpell("Fwoosh", bob);
-     */
-
     /*SUB2.txt*/
     Warlock richard("Richard", "foo");
     richard.setTitle("Hello, I'm Richard the Warlock!");
@@ -52,5 +50,7 @@ int main()
     richard.launchSpell("Polymorph", *wall);
     richard.launchSpell("Fireball", *wall);
 
+    richard.forgetSpell("Polymorph");
+    richard.forgetSpell("Fireball");
     return (0);
 };

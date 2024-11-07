@@ -4,7 +4,7 @@ Fwoosh::Fwoosh() : Aspell("Fwoosh", "fwooshed")
 {
 }
 
-const Aspell* Fwoosh::CloneAspell()
+const Aspell *Fwoosh::CloneAspell()
 {
     return new Fwoosh();
 }
