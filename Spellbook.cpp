@@ -4,10 +4,9 @@ Spellbook::Spellbook()
 {
 }
 
-void Spellbook::learnSpell(Aspell *spell)
+void Spellbook::learnSpell(ASpell *spell)
 {
-    if (spell)
-        bookOfSpells[spell->getSpellName()] = spell;
+    if (spell) bookOfSpells[spell->getSpellName()] = spell;
 }
 
 void Spellbook::forgetSpell(const std::string &spellToForget)
@@ -20,11 +19,11 @@ void Spellbook::forgetSpell(const std::string &spellToForget)
     }
 }
 
-Aspell *Spellbook::createSpell(const std::string &spelltoCreate)
+ASpell *Spellbook::createSpell(const std::string &spelltoCreate)
 {
 
     if (bookOfSpells[spelltoCreate])
     {
-        bookOfSpells[spelltoCreate]->CloneAspell();
+        bookOfSpells[spelltoCreate]->CloneASpell();
     }
 }

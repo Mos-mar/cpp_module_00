@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-#include "Aspell.hpp"
+#include "ASpell.hpp"
 #include "ATarget.hpp"
 #include "Dummy.hpp"
 #include "Fwoosh.hpp"
@@ -31,7 +31,7 @@ public:
     const std::string &getTitle() const;
     void setTitle(const std::string &EnterName);
     void introduce() const;
-    void learnSpell(Aspell *learnThisSpell);
+    void learnSpell(ASpell *learnThisSpell);
     void forgetSpell(std::string spellToForget);
     void launchSpell(std::string spellName, ATarget &currTarget);
     ~Warlock();

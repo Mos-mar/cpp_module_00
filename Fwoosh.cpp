@@ -1,15 +1,15 @@
 #include "Fwoosh.hpp"
 
-Fwoosh::Fwoosh() : Aspell("Fwoosh", "fwooshed")
+Fwoosh::Fwoosh() : ASpell("Fwoosh", "fwooshed")
 {
 }
 
-const Aspell *Fwoosh::CloneAspell()
+const ASpell *Fwoosh::CloneASpell()
 {
     return new Fwoosh();
 }
 
-const std::unique_ptr<Aspell> Fwoosh::CloneAspell2()
+const std::unique_ptr<ASpell> Fwoosh::CloneASpell2()
 {
     return std::make_unique<Fwoosh>();
 }

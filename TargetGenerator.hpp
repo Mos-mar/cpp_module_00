@@ -9,7 +9,7 @@
 class TargetGenerator
 {
 private:
-    std::vector<ATarget *> knownTargets; // ou un set pour avoir des uniques
+    std::vector<ATarget*> knownTargets; // ou un set pour avoir des uniques
 
 public:
     TargetGenerator();

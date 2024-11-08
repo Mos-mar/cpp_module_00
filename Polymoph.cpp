@@ -1,15 +1,15 @@
 #include "Polymoph.hpp"
 
-Polymorph::Polymorph() : Aspell("Polymorph", "turned into a critter")
+Polymorph::Polymorph() : ASpell("Polymorph", "turned into a critter")
 {
 }
 
-const Aspell *Polymorph::CloneAspell()
+const ASpell *Polymorph::CloneASpell()
 {
     return new Polymorph();
 }
 
-const std::unique_ptr<Aspell> Polymorph::CloneAspell2()
+const std::unique_ptr<ASpell> Polymorph::CloneASpell2()
 {
     return std::make_unique<Polymorph>();
 }

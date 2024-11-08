@@ -4,9 +4,9 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "Aspell.hpp"
+#include "ASpell.hpp"
 
-class Aspell; // Forward declaration
+class ASpell; // Forward declaration
 class ATarget
 {
 private:
@@ -19,7 +19,7 @@ public:
     const std::string &getTargetType() const;
     virtual const ATarget *CloneATarget() = 0;
     virtual const std::unique_ptr<ATarget> CloneATarget2() = 0;
-    const void getHitBySpell(const Aspell &spell) const;
+    const void getHitBySpell(const ASpell &spell) const;
 };
 
 #endif // ATarget_HPP

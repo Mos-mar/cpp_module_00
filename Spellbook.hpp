@@ -1,6 +1,6 @@
 #ifndef SPELLBOOK_HPP
 #define SPELLBOOK_HPP
-#include "Aspell.hpp"
+#include "ASpell.hpp"
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -8,15 +8,15 @@
 class Spellbook
 {
 private:
-    std::unordered_map<std::string, Aspell *> bookOfSpells;
+    std::unordered_map<std::string, ASpell *> bookOfSpells;
 
 public:
     Spellbook();
     Spellbook(Spellbook &) = delete;
     Spellbook &operator=(const Spellbook &) = delete;
-    void learnSpell(Aspell *spell);
+    void learnSpell(ASpell *spell);
     void forgetSpell(const std::string &spellToForget);
-    Aspell *createSpell(const std::string &spelltoCreate);
+    ASpell *createSpell(const std::string &spelltoCreate);
 };
 
 #endif // Spellbook_HPP

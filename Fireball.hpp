@@ -1,14 +1,14 @@
 #ifndef FIREBALL_HPP
 #define FIREBALL_HPP
-#include "Aspell.hpp"
+#include "ASpell.hpp"
 
-class Fireball : public Aspell
+class Fireball : public ASpell
 {
 private:
 public:
     Fireball();
-    virtual const Aspell *CloneAspell() override;
-    virtual const std::unique_ptr<Aspell> CloneAspell2() override;
+    virtual const ASpell *CloneASpell() override;
+    virtual const std::unique_ptr<ASpell> CloneASpell2() override;
 };
 
 #endif // Fireball_HPP

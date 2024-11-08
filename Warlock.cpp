@@ -26,7 +26,7 @@ void Warlock::introduce() const
     cout << getName() << ": " << "I am " << getName() << ", " << getTitle() << endl;
 }
 
-void Warlock::learnSpell(Aspell *learnThisSpell)
+void Warlock::learnSpell(ASpell *learnThisSpell)
 {
     if (mySpellBook && learnThisSpell)
     {
@@ -47,8 +47,7 @@ void Warlock::launchSpell(std::string spellName, ATarget &currTarget)
 
     if (mySpellBook)
     {
-        Aspell *spell = mySpellBook->createSpell(spellName);
-        // std::cout << spell->getSpellName();
+        ASpell *spell = mySpellBook->createSpell(spellName);
         if (spell)
         {
             // std::cout << "Warlock::launchSpell == my spell exists !! : "  << spell->getEffect() << std::endl;

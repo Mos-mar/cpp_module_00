@@ -1,14 +1,14 @@
 #ifndef POLYMORPH_HPP
 #define POLYMORPH_HPP
-#include "Aspell.hpp"
+#include "ASpell.hpp"
 
-class Polymorph : public Aspell
+class Polymorph : public ASpell
 {
 private:
 public:
     Polymorph();
-    virtual const Aspell *CloneAspell() override;
-    virtual const std::unique_ptr<Aspell> CloneAspell2() override;
+    virtual const ASpell *CloneASpell() override;
+    virtual const std::unique_ptr<ASpell> CloneASpell2() override;
 };
 
 #endif // Fireball_HPP

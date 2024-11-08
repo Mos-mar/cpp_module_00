@@ -1,15 +1,15 @@
 #include "Fireball.hpp"
 
-Fireball::Fireball() : Aspell("Fireball", "burnt to a crisp")
+Fireball::Fireball() : ASpell("Fireball", "burnt to a crisp")
 {
 }
 
-const Aspell *Fireball::CloneAspell()
+const ASpell *Fireball::CloneASpell()
 {
     return new Fireball();
 }
 
-const std::unique_ptr<Aspell> Fireball::CloneAspell2()
+const std::unique_ptr<ASpell> Fireball::CloneASpell2()
 {
     return std::make_unique<Fireball>();
 }
